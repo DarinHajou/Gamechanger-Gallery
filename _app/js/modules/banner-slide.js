@@ -14,7 +14,8 @@ export default function () {
 	
 		activeSlide = (activeSlide + 1) % slides.length;
 	}
-	
+
+	changeSlide();  // Call the function once initially to show the first slide
 	setInterval(() => {
 		changeSlide();
 	}, 4000);
