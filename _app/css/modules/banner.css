@@ -1,8 +1,9 @@
 .banner {
 	position: relative;
 	width: 100%;
-	height: 600px;
+	height: auto;
 	overflow: hidden;
+	padding-bottom: 56.25%; /* for 16:9 aspect ratio, adjust accordingly based on your images' aspect ratio */
 }
 
 .banner__slide {
@@ -11,21 +12,88 @@
 	height: 100%;
 	opacity: 0;
 	transition: opacity 1s;
+	top: 0;
+	left: 0;
 }
 
 .banner__slide.active {
 	opacity: 1;
 }
-.banner__text {
+
+.banner__title {
 	position: absolute;
-	top: 50%;
+	top: 15%;  /* adjust this to move the title */
 	left: 50%;
 	transform: translate(-50%, -50%);
-	/* add other styles as needed */
+	font-family: 'Saira Condensed', sans-serif;
+	font-size: calc(1.5rem + 2vw);
+	text-align: center;
+	color: var(--color-background);
+	background: linear-gradient(white, rgba(255,255,255,0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.banner__caption {
+	position: absolute;
+	top: 50%;  /* adjust this to move the caption */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(1rem + 1vw);
+	color: var(--color-background);
+	text-align: center;
+	background: linear-gradient(white, rgba(255,255,255,0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.banner__slide::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3); /* adjust the last number to control the darkness. 0 is fully transparent, 1 is fully black */
 }
 
 .banner__slide img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	z-index: -1;
 }
+
+@media (max-width: 600px) {
+	.banner__title {
+		font-size: 10vw;
+	}
+
+	.banner__caption {
+		font-size: 6vw;
+	}
+}
+@media (max-width: 1200px) {
+	.banner__title {
+		font-size: 6vw;
+	}
+
+	.banner__caption {
+		font-size: 3.5vw;
+	}
+}
+@media (max-width: 1900px) {
+	.banner__title {
+		font-size: 10vw;
+	}
+
+	.banner__caption {
+		font-size: 3.5vw;
+	}
+}
+
