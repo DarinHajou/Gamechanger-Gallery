@@ -22,7 +22,7 @@ export default function () {
 	// When the window is resized, check if we need to show the search icon
 	window.addEventListener('resize', function() {
 		const menuButton = document.querySelector('.header__menu-button');
-		 if (window.matchMedia('(min-width:1040px)').matches) {
+		 if (window.matchMedia('(min-width:1240px)').matches) {
 			  searchIcon.style.display = 'none';
 			  searchBar.style.display = 'block';
 		 } else {
