@@ -1,5 +1,5 @@
 
-	/* Styles for your header */
+	/* Styles for the header */
 	.header {
 		position: relative;
 		background: #fff;
@@ -12,7 +12,7 @@
 
 	.header__logo {
 		text-align: start;
-	}
+	}	
 
 	.header__logo img {
 		width: 20vw;  /* it will take 20% of the viewport width */
@@ -45,12 +45,26 @@
 
 	.search-close {
 		display: none; /* Initially hidden */
-		/* Add styles for your close button */
+		/* Add styles for the close button */
 	}
 
 	.search-icon {
 		/* Add styles for your search icon */
 	}
+
+	.search-input {
+		position: relative;
+	}
+
+	.search-bar-icon {
+		position: absolute;
+		display: none;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+		pointer-events: none;
+		color: #909090;
+  }
 
 	/* 
 	The .visually-hidden class is used to hide elements visually, while still keeping them accessible to screen readers. 
@@ -183,3 +197,9 @@
 			display: none; /* Hide the search icon and close button */
 		}	
 	}
+
+	@media (min-width: 1024px) {
+	.search-bar-icon {
+	  display: block; /* Displayed only on screens larger than 1024px */
+	}
+}
