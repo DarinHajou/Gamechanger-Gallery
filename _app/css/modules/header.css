@@ -1,205 +1,212 @@
+.header {
+	position: relative;
+	background: #fff;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Oswald', sans-serif;
+}
 
-	/* Styles for the header */
-	.header {
-		position: relative;
-		background: #fff;
-		padding: 1rem; /* Adjust padding as needed */
-		display: flex; /* Add this */
-		justify-content: space-between; /* Add this */
-		align-items: center; /* Add this */
-		font-family: 'Oswald', sans-serif;
-	}
+.header__logo {
+	text-align: start;
+}	
 
-	.header__logo {
-		text-align: start;
-	}	
+.header__logo img {
+	width: 20vw;  /* it will take 20% of the viewport width */
+	min-width: 100px; /* it won't shrink below 100px */
+	max-width: 200px; /* it won't go beyond 200px */
+	height: auto; /* height will be adjusted automatically to maintain aspect ratio */
+}
 
-	.header__logo img {
-		width: 20vw;  /* it will take 20% of the viewport width */
-		min-width: 100px; /* it won't shrink below 100px */
-		max-width: 200px; /* it won't go beyond 200px */
-		height: auto; /* height will be adjusted automatically to maintain aspect ratio */
-	}
-	
-	/* Styles for the search box */
-	.header__search {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 100%;
-		margin-right: 1rem;
-	}
+/* Styles for the search box */
+.header__search {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	margin-right: 1rem;
+}
 
+.header__search input[type="search"] {
+	display: none; /* Initially hidden */
+	width: 150px;  /* it will take 100% of its parent's width at smaller screens */
+	padding: 1em;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.header__search input[type="search"]:focus,
+.header__search input[type="search"]:hover {
+	border-color: #909090;
+}
+
+.search-close {
+	display: none; /* Initially hidden */
+	/* Add styles for the close button */
+}
+
+.search-icon {
+	/* Add styles for your search icon */
+}
+
+.search-input {
+	position: relative;
+}
+
+.search-bar-icon {
+	position: absolute;
+	display: none;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: #909090;
+}
+
+/* 
+The .visually-hidden class is used to hide elements visually, while still keeping them accessible to screen readers. 
+This is useful when we want to provide additional context or labels to elements for screen reader users, without changing the visual design of the page.
+*/
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+.header__right-container {
+	display: flex;
+	justify-content: flex-end; 
+	align-items: center;
+	flex-direction: row; /* Make sure it's row */
+}
+
+.header__menu-button {
+	text-align: right;  /* Align the button to the right */
+	background: transparent;
+	border: none;
+	width: auto;  /* The button will take up only as much width as needed */
+}
+
+.header__nav {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+	background: #fff;
+	padding: 1rem;
+	z-index: 10
+}
+
+.header__nav--active {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+ }
+
+ul {
+	font-weight: 500;
+}
+
+
+
+.header__nav .nav__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.header__nav .nav__item {
+	text-align: center;
+	padding: var(--gap);
+}
+
+.header__nav .nav__link {	
+	text-decoration: none;
+	color: #000;
+}
+
+.header__nav .nav__link:hover {
+	text-decoration: none;
+}
+
+@media (min-width: 480px) {
 	.header__search input[type="search"] {
 		display: none; /* Initially hidden */
-		width: 150px;  /* it will take 100% of its parent's width at smaller screens */
+		width: 300px;  /* it will take 100% of its parent's width at smaller screens */
 		padding: 1em;
 		border: 1px solid transparent;
 		border-radius: 4px;
 	}
+}
 
-	.header__search input[type="search"]:focus,
-	.header__search input[type="search"]:hover {
-		border-color: #909090;
-	}
-
-	.search-close {
-		display: none; /* Initially hidden */
-		/* Add styles for the close button */
-	}
-
-	.search-icon {
-		/* Add styles for your search icon */
-	}
-
-	.search-input {
-		position: relative;
-	}
-
-	.search-bar-icon {
-		position: absolute;
-		display: none;
-		top: 50%;
-		right: 1rem;
-		transform: translateY(-50%);
-		pointer-events: none;
-		color: #909090;
-  }
-
-	/* 
-	The .visually-hidden class is used to hide elements visually, while still keeping them accessible to screen readers. 
-	This is useful when we want to provide additional context or labels to elements for screen reader users, without changing the visual design of the page.
-	*/
-	.visually-hidden {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0,0,0,0);
-		border: 0;
-	}
-
-	.header__right-container {
-		display: flex;
-		justify-content: flex-end; 
-		align-items: center;
-		flex-direction: row; /* Make sure it's row */
-	}
-	
-	.header__menu-button {
-		text-align: right;  /* Align the button to the right */
-		background: transparent;
-		border: none;
-		width: auto;  /* The button will take up only as much width as needed */
-	}
-
-	.header__nav {
-		display: none;  /* Initially hide the navigation */
-		/* width: 100%; */
-	}
-
-	ul {
-		font-weight: 500;
-	}
-
-	.header__nav--active {
-		display: block;  /* Show the navigation when the --active modifier is added */
-	}
-
-	.header__nav .nav__list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.header__nav .nav__item {
-		text-align: center;
-		padding: var(--gap);
-	}
-
-	.header__nav .nav__link {	
-		text-decoration: none;
-		color: #000;
-	}
-
-	.header__nav .nav__link:hover {
-		text-decoration: underline;
-	}
-
-	@media (min-width: 480px) {
-		.header__search input[type="search"] {
-			display: none; /* Initially hidden */
-			width: 300px;  /* it will take 100% of its parent's width at smaller screens */
-			padding: 1em;
-			border: 1px solid transparent;
-			border-radius: 4px;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.header__search input[type="search"] {
-			display: none; /* Initially hidden */
-			width: 550px;  /* it will take 100% of its parent's width at smaller screens */
-			padding: 1em;
-			border: 1px solid transparent;
-			border-radius: 4px;
-		}
-	}
-
-	/* Styles for larger screens */
-	@media (min-width: 1024px) {
-		.header__nav {
-			position: static; /* it will follow the normal document flow */
-			width: auto;  /* The nav will take up only as much width as needed */
-			display: flex;  /* It will lay out its children (list items) in a row */
-			justify-content: flex-start; 
-			margin-right: 10%;  /* Add a right margin to push the contents left */
-			border: none;
-		}
-
-		.header__menu-button {
-			display: none;
-		}
-
-		.header__nav .nav__list {
-			display: flex; /* List items will be in a row */
-			gap: var(--gap);
-		}
-
-		.header__nav .nav__link {
-			text-decoration: none;
-			color: #000;
-			padding: 0.5em 1em; /* Add padding to make it look like a button */
-			border-radius: 4px; /* Round the corners */
-			transition: background 0.2s ease; /* Smooth transition */
-		}
-
-		.header__nav .nav__link:hover,
-		.header__nav .nav__link:focus {
-			background: var(--color-highlight); /* Change background color when hovered or focused */
-			color: #fff; /* Change text color when hovered or focused */
-		}
-
-		.header__search {
-			justify-content: flex-start; /* Align the children (input and button) to the start */
-	}
-
+@media (min-width: 768px) {
 	.header__search input[type="search"] {
-			display: block; /* Show the input field */
-			width: 500px;
-			
+		display: none; /* Initially hidden */
+		width: 550px;  /* it will take 100% of its parent's width at smaller screens */
+		padding: 1em;
+		border: 1px solid transparent;
+		border-radius: 4px;
 	}
+}
 
-	.search-icon,
-	.search-close {
-			display: none; /* Hide the search icon and close button */
-		}	
-	}
-
-	@media (min-width: 1024px) {
+@media (min-width: 1024px) {
 	.search-bar-icon {
 	  display: block; /* Displayed only on screens larger than 1024px */
 	}
+}
+
+/* Styles for larger screens */
+@media (min-width: 1400px) {
+	.header__nav {
+		position: static; /* it will follow the normal document flow */
+		width: auto;  /* The nav will take up only as much width as needed */
+		display: flex;  /* It will lay out its children (list items) in a row */
+		justify-content: flex-start; 
+		margin-right: 1%;  /* Added a right margin to push the contents left */
+		border: none;
+	}
+
+	.header__menu-button {
+		display: none;
+	}
+
+	.header__nav .nav__list {
+		display: flex; /* List items will be in a row */
+		gap: var(--gap);
+	}
+
+	.header__nav .nav__link {
+		text-decoration: none;
+		color: #000;
+		padding: 0.5em 1em; /* Added padding to make it look like a button */
+		border-radius: 4px; /* Round the corners */
+		transition: background 0.2s ease; /* Smooth transition */
+	}
+
+	.header__nav .nav__link:hover,
+	.header__nav .nav__link:focus {
+		background: var(--color-highlight); /* Changes background color when hovered or focused */
+		color: #fff; /* Changes text color when hovered or focused */
+	}
+
+	.header__search {
+		justify-content: flex-start; /* Align the children (input and button) to the start */
+}
+
+.header__search input[type="search"] {
+		display: block; /* Show the input field */
+		width: 600px;
+		
+}
+
+.search-icon,
+.search-close {
+		display: none; /* Hide the search icon and close button */
+	}	
 }
