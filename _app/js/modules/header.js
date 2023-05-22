@@ -1,4 +1,3 @@
-
 export default function () {
 	const searchIcon = document.querySelector('.search-icon');
 	const searchClose = document.querySelector('.search-close');
