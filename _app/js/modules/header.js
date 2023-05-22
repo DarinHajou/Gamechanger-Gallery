@@ -1,3 +1,4 @@
+
 export default function () {
 	const searchIcon = document.querySelector('.search-icon');
 	const searchClose = document.querySelector('.search-close');
@@ -5,7 +6,7 @@ export default function () {
 	const searchBarIcon = document.querySelector('.search-bar-icon');
  
 	function handleResize() {
-	  if (window.matchMedia('(min-width:1024px)').matches) {
+	  if (window.matchMedia('(min-width:1400px)').matches) {
 		 // Screen is wider than 1024px, search bar should always be open
 		 searchBar.style.display = '';
 		 searchClose.style.display = 'none';
@@ -49,11 +50,9 @@ export default function () {
 	// When the window is resized, call handleResize function
 	window.addEventListener('resize', handleResize);
  
-	document
-	  .querySelector('.header__menu-button')
-	  .addEventListener('click', function () {
-		 document
-			.querySelector('.header__nav')
-			.classList.toggle('header__nav--active');
-	});
+	document.querySelector('.header__menu-button').addEventListener('click', function () {
+		document.querySelector('.header__nav').classList.toggle('header__nav--active');
+		this.classList.toggle('header__menu-button--active');
+	 });
+	 
  } 
