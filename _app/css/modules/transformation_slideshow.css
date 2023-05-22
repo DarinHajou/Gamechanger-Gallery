@@ -1,0 +1,74 @@
+.latest-transformation__slideshow {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 100%; /* Ensure the slideshow doesn't exceed its container's width */
+}
+
+.latest-transformation__slideshow__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0,0,0,0.5);
+	border: none;
+	padding: 2vw;
+	font-size: 2vw;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.latest-transformation__slideshow__button--left {
+	margin-left: 10px;
+	z-index: 9; /* Increase the z-index to ensure the button appears above the slideshow */
+}
+
+.latest-transformation__slideshow__button--right {
+	margin-right: 10px;
+	z-index: 9; /* Increase the z-index to ensure the button appears above the slideshow */
+}
+
+.latest-transformation__slideshow__track {
+	display: flex;
+	width: 400%; /* Set the width to accommodate all the slides */
+	transition: transform 0.8s ease-in-out;
+}
+
+.latest-transformation__slide {
+	width: 25%; /* Divide the track into four equal-width slides */
+	transition: transform 0.8s ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.6;
+}
+
+.latest-transformation__slide.selected {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.latest-transformation__image {
+	width: auto; /* Allow the image to adjust its width */
+	height: auto; /* Allow the image to adjust its height */
+	max-width: 100%; /* Set a maximum width to ensure responsiveness */
+	min-height: 200px; /* Set a minimum height for the image */
+	object-fit: contain;
+	padding: 20px;
+}
+
+.latest-transformation__slideshow__button--left {
+	left: 20px;
+	z-index: 9;
+}
+
+.latest-transformation__slideshow__button--right {
+	right: 20px;
+	z-index: 9;
+}
+
+@media (min-width: 768px) {
+	.latest-transformation__slideshow {
+		max-width: calc(720px - 40px);
+		margin: 0 auto;
+	}
+}
