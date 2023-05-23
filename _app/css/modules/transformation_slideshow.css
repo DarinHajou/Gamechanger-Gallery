@@ -1,17 +1,46 @@
-
 .slideshow-container {
 	display: flex;
 	flex-wrap: wrap; /* This will make the slideshows wrap onto the next line when there's not enough space */
 	justify-content: space-between; /* This will add some space between the slideshows */
+	 /* add left and right padding */
+	margin-top: 30px;
 }
 
 .latest-transformation__slideshow {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	margin: 0 auto;
-	flex: 1 0 320px; /* This will make the slideshows take up equal space, but not shrink below 320px */
+	flex: 1 0 300px; /* This will make the slideshows take up equal space, but not shrink below 320px */
 	margin: 10px; /* Add some space around each slideshow */
+}
+
+.blinking-light {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background-color: green;
+	margin-left: 10px;
+	animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+	0% { opacity: 0.2; }
+	50% { opacity: 1; }
+	100% { opacity: 0.2; }
+ }
+
+.latest-transformation__title {
+	margin-top: 60px;
+	margin-left: 40px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.slideshow-caption {
+	margin-top: 10px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
 }
 
 .latest-transformation__slideshow__button {
@@ -63,6 +92,10 @@
 @media (min-width: 768px) {
 	.latest-transformation__slideshow {
 		max-width: 800px; /* This will set the maximum width at larger screens */
+	}
+
+	.slideshow-caption {
+		font-size: 14px;
 	}
 	
 	.latest-transformation__image {
