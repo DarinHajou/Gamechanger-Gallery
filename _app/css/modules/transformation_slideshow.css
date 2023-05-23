@@ -1,8 +1,17 @@
+
+.slideshow-container {
+	display: flex;
+	flex-wrap: wrap; /* This will make the slideshows wrap onto the next line when there's not enough space */
+	justify-content: space-between; /* This will add some space between the slideshows */
+}
+
 .latest-transformation__slideshow {
 	position: relative;
 	overflow: hidden;
+	width: 100%;
 	margin: 0 auto;
-	max-width: 100%; /* Ensure the slideshow doesn't exceed its container's width */
+	flex: 1 0 320px; /* This will make the slideshows take up equal space, but not shrink below 320px */
+	margin: 10px; /* Add some space around each slideshow */
 }
 
 .latest-transformation__slideshow__button {
@@ -18,23 +27,22 @@
 }
 
 .latest-transformation__slideshow__button--left {
-	margin-left: 10px;
-	z-index: 9; /* Increase the z-index to ensure the button appears above the slideshow */
+	left: 2vw;
+	z-index: 9;
 }
 
 .latest-transformation__slideshow__button--right {
-	margin-right: 10px;
-	z-index: 9; /* Increase the z-index to ensure the button appears above the slideshow */
+	right: 2vw;
 }
 
 .latest-transformation__slideshow__track {
 	display: flex;
-	width: 400%; /* Set the width to accommodate all the slides */
+	width: 400%;
 	transition: transform 0.8s ease-in-out;
 }
 
 .latest-transformation__slide {
-	width: 25%; /* Divide the track into four equal-width slides */
+	width: 25%;
 	transition: transform 0.8s ease-in-out;
 	display: flex;
 	justify-content: center;
@@ -48,27 +56,23 @@
 }
 
 .latest-transformation__image {
-	width: auto; /* Allow the image to adjust its width */
-	height: auto; /* Allow the image to adjust its height */
-	max-width: 100%; /* Set a maximum width to ensure responsiveness */
-	min-height: 200px; /* Set a minimum height for the image */
+	width: 100%;
 	object-fit: contain;
-	padding: 20px;
-}
-
-.latest-transformation__slideshow__button--left {
-	left: 20px;
-	z-index: 9;
-}
-
-.latest-transformation__slideshow__button--right {
-	right: 20px;
-	z-index: 9;
 }
 
 @media (min-width: 768px) {
 	.latest-transformation__slideshow {
-		max-width: calc(720px - 40px);
-		margin: 0 auto;
+		max-width: 800px; /* This will set the maximum width at larger screens */
+	}
+	
+	.latest-transformation__image {
+		width: 100%; /* This will make the image take up 100% of the slideshow's width */
+		max-width: 100%; /* This will ensure the image never goes beyond the boundaries of its container */
+	}
+}
+
+@media (max-width: 767px) {
+	.latest-transformation__slideshow:nth-child(2) {
+		display: none;
 	}
 }
