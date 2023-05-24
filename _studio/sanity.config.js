@@ -1,18 +1,17 @@
-import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import { deskTool } from 'sanity/desk';
+import { visionTool } from '@sanity/vision';
 
-export default defineConfig({
-  name: 'default',
-  title: 'Gamechanger Gallery',
+import schemas from './schemas/schemas.js';
 
-  projectId: 'mv2ma44l',
-  dataset: 'production',
+export default {
+	title: 'Studio',
 
-  plugins: [deskTool(), visionTool()],
+	projectId: '',
+	dataset: '',
 
-  schema: {
-    types: schemaTypes,
-  },
-})
+	plugins: [deskTool(), visionTool()],
+
+	schema: {
+		types: schemas,
+	},
+};
