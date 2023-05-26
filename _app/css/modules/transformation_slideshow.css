@@ -1,7 +1,17 @@
+.container {
+	padding-bottom: 30px;
+ }
+
+ .main-section {
+	background-color: #f2f2f2;
+	background-image: url('/_app/assets/images/texture.jpg');
+
+ }
+ 
 .slideshow-container {
 	display: flex;
 	flex-wrap: wrap; /* This will make the slideshows wrap onto the next line when there's not enough space */
-	justify-content: space-between; /* This will add some space between the slideshows */
+	justify-content:space-evenly; /* This will add some space between the slideshows */
 	 /* add left and right padding */
 	margin-top: 30px;
 }
@@ -55,6 +65,12 @@
 	cursor: pointer;
 }
 
+.latest-transformation__slideshow__button {
+	font-size: 14px;
+	padding: 6px 12px;
+	background: var(--color-foreground);
+ }
+
 .latest-transformation__slideshow__button--left {
 	left: 2vw;
 	z-index: 9;
@@ -87,13 +103,19 @@
 .latest-transformation__image {
 	width: 100%;
 	object-fit: contain;
+	
 }
 
 @media (min-width: 768px) {
 	.latest-transformation__slideshow {
-		max-width: 800px; /* This will set the maximum width at larger screens */
+		max-width: 750px; /* This will set the maximum width at larger screens */
+		
 	}
 
+	.latest-transformation__title {
+		margin-left: 30px; /* Center the title horizontally */
+	}
+	
 	.slideshow-caption {
 		font-size: 14px;
 	}
@@ -107,5 +129,11 @@
 @media (max-width: 767px) {
 	.latest-transformation__slideshow:nth-child(2) {
 		display: none;
+	}
+}
+
+@media (min-width: 1400px) {
+	.latest-transformation__title {
+		margin-left: 40px; /* Center the title horizontally */
 	}
 }
