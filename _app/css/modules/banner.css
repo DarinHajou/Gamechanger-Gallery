@@ -4,6 +4,7 @@
 	height: auto;
 	overflow: hidden;
 	padding-bottom: 56.25%; /* for 16:9 aspect ratio, adjust accordingly based on your images' aspect ratio */
+
 }
 
 .banner__slide {
