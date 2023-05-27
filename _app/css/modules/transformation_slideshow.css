@@ -16,7 +16,7 @@
 	margin-top: 30px;
 }
 
-.latest-transformation__slideshow {
+.latest-transformations__slideshow {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
@@ -40,10 +40,11 @@
 	100% { opacity: 0.2; }
  }
 
-.latest-transformation__title {
+.latest-transformations__title {
 	margin-top: 60px;
 	margin-left: 40px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+	color: var(--color-highlight);
 }
 
 .slideshow-caption {
@@ -53,7 +54,7 @@
 	font-size: 10px;
 }
 
-.latest-transformation__slideshow__button {
+.latest-transformations__slideshow__button {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -65,28 +66,28 @@
 	cursor: pointer;
 }
 
-.latest-transformation__slideshow__button {
+.latest-transformations__slideshow__button {
 	font-size: 14px;
 	padding: 6px 12px;
 	background: var(--color-foreground);
  }
 
-.latest-transformation__slideshow__button--left {
+.latest-transformations__slideshow__button--left {
 	left: 2vw;
 	z-index: 9;
 }
 
-.latest-transformation__slideshow__button--right {
+.latest-transformations__slideshow__button--right {
 	right: 2vw;
 }
 
-.latest-transformation__slideshow__track {
+.latest-transformations__slideshow__track {
 	display: flex;
 	width: 400%;
 	transition: transform 0.8s ease-in-out;
 }
 
-.latest-transformation__slide {
+.latest-transformations__slide {
 	width: 25%;
 	transition: transform 0.8s ease-in-out;
 	display: flex;
@@ -95,24 +96,24 @@
 	opacity: 0.6;
 }
 
-.latest-transformation__slide.selected {
+.latest-transformations__slide.selected {
 	opacity: 1;
 	transform: scale(1);
 }
 
-.latest-transformation__image {
+.latest-transformations__image {
 	width: 100%;
 	object-fit: contain;
 	
 }
 
 @media (min-width: 768px) {
-	.latest-transformation__slideshow {
+	.latest-transformations__slideshow {
 		max-width: 750px; /* This will set the maximum width at larger screens */
 		
 	}
 
-	.latest-transformation__title {
+	.latest-transformations__title {
 		margin-left: 30px; /* Center the title horizontally */
 	}
 	
@@ -120,20 +121,23 @@
 		font-size: 14px;
 	}
 	
-	.latest-transformation__image {
+	.latest-transformations__image {
 		width: 100%; /* This will make the image take up 100% of the slideshow's width */
 		max-width: 100%; /* This will ensure the image never goes beyond the boundaries of its container */
 	}
 }
 
 @media (max-width: 767px) {
-	.latest-transformation__slideshow:nth-child(2) {
-		display: none;
+	.latest-transformations__slideshow:nth-child(2) {
+
 	}
+	.latest-transformations__title {
+		margin-left: 20px;
+	} 
 }
 
 @media (min-width: 1400px) {
-	.latest-transformation__title {
+	.latest-transformations__title {
 		margin-left: 40px; /* Center the title horizontally */
 	}
 }
