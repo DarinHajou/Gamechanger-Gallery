@@ -1,25 +1,25 @@
- .grid {
+.grid {
 	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* default to single column for small screens */
+	grid-template-columns: repeat(12, 1fr);
 	gap: var(--gap);
 	width: 100%;
  }
  
- @media (min-width: 480px) {
+ @media (max-width: 767px) {
 	.grid {
-	  grid-template-columns: repeat(6, 1fr); /* 6 columns for small screens */
+	  grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
 	}
  }
  
  @media (min-width: 768px) {
 	.grid {
-	  grid-template-columns: repeat(8, 1fr); /* 8 columns for medium screens */
+	  grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
 	}
  }
  
  @media (min-width: 1024px) {
 	.grid {
-	  grid-template-columns: repeat(12, 1fr); /* 12 columns for large screens */
+	  grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
 	}
  }
  
