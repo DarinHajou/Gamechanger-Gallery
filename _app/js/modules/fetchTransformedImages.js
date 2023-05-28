@@ -1,6 +1,5 @@
-//fetchTransformedImages.js
-
 import { sanity } from "../sanity.js";
+import createModal from './modal.js';
 
 export default async function fetchTransformedImages() {
   const query = `*[_type == 'transformationImages']{
@@ -71,6 +70,21 @@ function createTransformedImageCard(image) {
   console.log("ImageStyle:", imageStyle);
   const description = image.imageStyle && image.imageStyle.description ? image.imageStyle.description : 'No description available';
   console.log("Description:", description);
+
+
+  // Create the modal and append it to the card
+  const modal = createModal(description);
+  card.appendChild(modal);
+
+  // Add event listener to show modal on hover
+  card.addEventListener('mouseenter', () => {
+    modal.classList.add('show');
+  });
+
+  // Add event listener to hide modal on mouseleave
+  card.addEventListener('mouseleave', () => {
+    modal.classList.remove('show');
+  });
 
   cardContent.appendChild(titleElement);
   cardContent.appendChild(descriptionElement);
