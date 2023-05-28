@@ -5,6 +5,7 @@ import transformSlideshow from './modules/transformation-slideshow.js';
 import fetchImageData from './modules/fetchImageData.js';
 import displayTransformedImages from './modules/displayTransformedImages.js';
 import fetchTransformedImages from './modules/fetchTransformedImages.js';
+import createModal from './modules/modal.js';
 
 header();
 bannerSlide();
@@ -12,3 +13,4 @@ transformSlideshow();
 fetchImageData();
 displayTransformedImages();
 fetchTransformedImages();
+createModal();
