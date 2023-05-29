@@ -100,7 +100,8 @@ This is useful when we want to provide additional context or labels to elements 
 	display: none;
 	background: #fff;
 	padding: 1rem;
-	z-index: 10
+	z-index: 10;
+	text-decoration: underline;
 }
 
 .header__nav--active {

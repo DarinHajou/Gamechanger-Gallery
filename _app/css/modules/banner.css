@@ -1,3 +1,7 @@
+.container {
+	padding-bottom: 30px;
+ }
+ 
 .banner {
 	position: relative;
 	width: 100%;
@@ -23,7 +27,7 @@
 
 .banner__title {
 	position: absolute;
-	top: 15%;  /* adjust this to move the title */
+	top: 25%;  /* adjust this to move the title */
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: 'Saira Condensed', sans-serif;
@@ -88,7 +92,7 @@
 		font-size: 3.5vw;
 	}
 }
-@media (max-width: 1900px) {
+@media (max-width: 2400px) {
 	.banner__title {
 		font-size: 10vw;
 	}

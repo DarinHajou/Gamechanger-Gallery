@@ -109,8 +109,7 @@
 
 @media (min-width: 768px) {
 	.latest-transformations__slideshow {
-		max-width: 750px; /* This will set the maximum width at larger screens */
-		
+		max-width: 700px; /* This will set the maximum width at larger screens */
 	}
 
 	.latest-transformations__title {
@@ -141,3 +140,4 @@
 		margin-left: 40px; /* Center the title horizontally */
 	}
 }
+
