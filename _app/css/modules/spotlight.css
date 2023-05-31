@@ -1,0 +1,190 @@
+.spotlight {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 30px;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	background-color: rgb(237, 237, 237);
+}
+
+.spotlight__column {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.spotlight__slide {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: calc(100% - 20px); /* Adjust the height based on the number of images */
+	margin: 10px;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	overflow: hidden;
+}
+
+.spotlight__content {
+	position: relative;
+}
+
+.spotlight__slide::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 1;
+}
+
+.spotlight__slide:hover::before {
+	opacity: 1;
+}
+
+.spotlight__slide.active {
+	opacity: 1;
+}
+
+.spotlight__slide:hover {
+	transform: scale(1.05);
+}
+
+.spotlight__slide.active {
+	opacity: 1;
+}
+
+.spotlight__slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.spotlight__caption {
+	position: absolute;
+	bottom: 150px;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	color: #fff;
+	text-align: left;
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+
+.spotlight__slide:hover .spotlight__caption {
+	opacity: 1;
+}
+
+.spotlight__caption h3,
+.spotlight__caption p {
+	margin: 3px;
+	font-size: 20px;
+}
+
+.spotlight__text {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.spotlight__text h3 {
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+}
+
+.spotlight__text p {
+	font-size: 1.2rem;
+	color: #333;
+}
+
+.spotlight__outside-text {
+	margin-top: 10px;
+	text-align: left;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+}
+
+/* Add animation and timing */
+@keyframes slide {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	33.33% {
+		opacity: 1;
+	}
+	53.33% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.spotlight__column:nth-child(1) .spotlight__slide:nth-child(1) {
+	animation: slide 9s infinite;
+}
+
+.spotlight__column:nth-child(1) .spotlight__slide:nth-child(2) {
+	animation: slide 9s infinite 3s;
+}
+
+.spotlight__column:nth-child(2) .spotlight__slide:nth-child(1) {
+	animation: slide 9s infinite 6s;
+}
+
+.spotlight__column:nth-child(2) .spotlight__slide:nth-child(2) {
+	animation: slide 9s infinite;
+}
+
+.spotlight__column:nth-child(3) .spotlight__slide:nth-child(1) {
+	animation: slide 9s infinite 3s;
+}
+
+.spotlight__column:nth-child(3) .spotlight__slide:nth-child(2) {
+	animation: slide 9s infinite 6s;
+}
+
+/* Responsive Styles */
+@media (min-width: 321px) and (max-width: 767px) {
+	.spotlight__slide {
+		width: 90%;
+	}
+
+	.spotlight__caption {
+		bottom: 100px;
+	}
+
+	.spotlight__caption h3,
+	.spotlight__caption p {
+		font-size: 18px;
+	}
+
+	.spotlight__text h3 {
+		font-size: 1.3rem;
+	}
+
+	.spotlight__text p {
+		font-size: 1.1rem;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.spotlight__slide {
+		width: 300px;
+		margin: 10px;
+	}
+}

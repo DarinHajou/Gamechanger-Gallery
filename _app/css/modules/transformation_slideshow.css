@@ -1,10 +1,6 @@
-.container {
-	padding-bottom: 30px;
- }
-
- .main-section {
-	background-color: #f2f2f2;
-	background-image: url('/_app/assets/images/texture.jpg');
+.main-section {
+	background-color: #ffffff;
+	/* background-image: url('/_app/assets/images/texture.jpg'); */
 
  }
  
@@ -12,8 +8,7 @@
 	display: flex;
 	flex-wrap: wrap; /* This will make the slideshows wrap onto the next line when there's not enough space */
 	justify-content:space-evenly; /* This will add some space between the slideshows */
-	 /* add left and right padding */
-	margin-top: 30px;
+	margin-top: 40px;
 }
 
 .latest-transformations__slideshow {
@@ -21,16 +16,19 @@
 	overflow: hidden;
 	width: 100%;
 	flex: 1 0 300px; /* This will make the slideshows take up equal space, but not shrink below 320px */
-	margin: 10px; /* Add some space around each slideshow */
+	margin: 20px; /* Add some space around each slideshow */
 }
 
 .blinking-light {
+	position: absolute;
 	display: inline-block;
 	width: 13px;
 	height: 13px;
 	border-radius: 50%;
 	background-color: green;
-	margin-left: 10px;
+	left: -20px; /* Adjust the position as needed */
+	top: 50%; /* Adjust the position as needed */
+	transform: translateY(-50%);
 	animation: blink 1s infinite;
  }
 
@@ -40,12 +38,13 @@
 	100% { opacity: 0.2; }
  }
 
-.latest-transformations__title {
+ .latest-transformations__title {
+	position: relative;
 	margin-top: 60px;
-	margin-left: 40px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 	color: var(--color-highlight);
-}
+	margin-left: 120px;
+ }
 
 .slideshow-caption {
 	margin-top: 10px;
