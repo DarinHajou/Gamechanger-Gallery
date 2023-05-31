@@ -1,7 +1,7 @@
 .grid {
 	grid-template-columns: repeat(12, 1fr); 
 	gap: var(--gap);
-	gap: var(--gap-section);
+	grid-row-gap: 25px;
  }
  
  .card {
