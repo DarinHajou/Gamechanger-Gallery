@@ -25,7 +25,7 @@ export default function () {
 			searchBarIcon.style.display = 'none';
 		 }
 	  }
-	}
+	};
  
 	// Initialize visibility of search bar icon based on window size
 	handleResize();
