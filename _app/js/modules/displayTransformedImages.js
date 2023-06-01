@@ -6,7 +6,8 @@
 		function createTransformedImageElements(image) {
 		// Create an anchor element for the image
 		const imageLink = document.createElement('a');
-		imageLink.href = `path/to/athlete-details.html?id=${image.athlete._id}`;
+		imageLink.href = `../athlete-details-page/athlete-details-page.html?id=${image.athlete._id}`;
+
 		
 		// Create an image element
 		const imgElement = document.createElement('img');
