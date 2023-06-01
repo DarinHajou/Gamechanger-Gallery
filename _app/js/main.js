@@ -6,6 +6,8 @@ import fetchImageData from './modules/fetchImageData.js';
 import displayTransformedImages from './modules/displayTransformedImages.js';
 import fetchTransformedImages from './modules/fetchTransformedImages.js';
 import createModal from './modules/modal.js';
+import fetchAthleteDetails  from './modules/fetchAthleteDetails.js';
+import displayAthleteDetails  from './modules/displayAthleteDetails.js';
 
 header();
 bannerSlide();
@@ -14,3 +16,5 @@ fetchImageData();
 displayTransformedImages();
 fetchTransformedImages();
 createModal();
+fetchAthleteDetails();
+displayAthleteDetails();

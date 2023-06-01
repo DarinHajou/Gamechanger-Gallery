@@ -7,7 +7,9 @@ export default function createModal(description) {
 	modalContent.classList.add('modal-content');
 
 	const descriptionLink = document.createElement('a');
-	descriptionLink.href = 'path/to/athlete-details.html';
+	descriptionLink.href = '../athlete-details-page/athlete-details-page.html';
+
+
 	descriptionLink.target = '_blank'; // Open the link in a new tab/window
 	descriptionLink.style.textDecoration = 'none'; // Remove link decoration
 
