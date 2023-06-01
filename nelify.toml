@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"  
+  publish = "dist"
+  
+[context.production.environment]
+  SANITY_API_ENDPOINT = "https://wqwxnuxs.api.sanity.io/v1/data/query/production"  # Replace with your Sanity API endpoint
+
+[build.environment]
+  SANITY_API_ENDPOINT = "https://wqwxnuxs.api.sanity.io/v1/data/query/production"  # Replace with your Sanity API endpoint
