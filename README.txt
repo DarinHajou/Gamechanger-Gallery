@@ -74,5 +74,6 @@ tech.related@hotmail.com
 If you have any questions, suggestions, or feedback, please feel free to reach out:
 
 - Github repository: https://github.com/DarinHajou/Gamechanger_Gallery.git
+- Github projects: https://github.com/users/DarinHajou/projects/9/views/1
 - Sanity deploy: https://gamechangergallery.sanity.studio/
-- Netlify hosting: gamechangergallery.netlify.app
+- Netlify hosting: gamechangergallery.netlify.app (deployment process of the project to a hosting service couldn't be completed before the deadline)

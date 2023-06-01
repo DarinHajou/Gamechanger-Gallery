@@ -4,7 +4,7 @@ import { visionTool } from '@sanity/vision';
 import schemas from './schemas/schemas.js';
 
 export default {
-	title: 'Studio',
+	title: 'Gamechanger Gallery',
 
 	projectId: 'wqwxnuxs',
 	dataset: 'production',
