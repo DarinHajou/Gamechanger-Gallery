@@ -1,7 +1,7 @@
 Gamechanger Gallery
 ==================
 
-Gamechanger Gallery is a web-based sports legend or athletes gallery that offers a unique and immersive experience to sports enthusiasts. It showcases a collection of digital images featuring sports legends, transformed using cutting-edge AI technology and the Midjourney Discord bot. The project aims to combine the worlds of sports, art, and technology to provide a captivating and innovative platform for exploring sports legends and their transformative journey through AI-powered image manipulation techniques.
+Gamechanger Gallery is a web-based sports legends gallery that offers a unique and immersive experience to sports enthusiasts. It showcases a collection of digital images featuring sports legends, transformed using cutting-edge AI technology and the Midjourney Discord bot. The project aims to combine the worlds of sports, art, and technology to provide a captivating and innovative platform for exploring sports legends and their transformative journey through AI-powered image manipulation techniques.
 
 Users can browse through the transformed images of sports legends categorized by various artistic styles, including cubism, surrealism, pop art, and more. This allows users to explore different visual interpretations of these iconic figures and gain a fresh perspective on their impact and legacy.
 
