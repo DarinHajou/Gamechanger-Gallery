@@ -5,7 +5,6 @@ import transformSlideshow from './modules/transformation-slideshow.js';
 import fetchTransformedImages from './modules/fetchTransformedImages.js';
 import createModal from './modules/modal.js';
 import fetchAthleteDetails  from './modules/fetchAthleteDetails.js';
-import displayAthleteDetails  from './modules/displayAthleteDetails.js';
 
 header();
 bannerSlide();
@@ -13,4 +12,3 @@ transformSlideshow();
 fetchTransformedImages();
 createModal();
 fetchAthleteDetails();
-displayAthleteDetails();
