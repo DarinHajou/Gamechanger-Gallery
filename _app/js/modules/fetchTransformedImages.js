@@ -35,7 +35,7 @@ const transformationImagesContainer = document.getElementById(
 fetchTransformedImages().then((data) => {
   data.forEach((image) => {
     const transformedImageElement = createTransformedImageCard(image);
-    console.log("Image:", image);
+    // console.log("Image:", image);
     transformationImagesContainer.appendChild(transformedImageElement);
   });
 });
@@ -67,9 +67,9 @@ function createTransformedImageCard(image) {
 
   // Check if imageStyle exists and has description
   const imageStyle = image.imageStyle || {};
-  console.log("ImageStyle:", imageStyle);
+  // console.log("ImageStyle:", imageStyle);
   const description = image.imageStyle && image.imageStyle.description ? image.imageStyle.description : 'No description available';
-  console.log("Description:", description);
+  // console.log("Description:", description);
 
 
   // Create the modal and append it to the card
