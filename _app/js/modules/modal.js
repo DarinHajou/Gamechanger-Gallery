@@ -1,5 +1,5 @@
 // modal.js
-export default function createModal(description) {
+export default function createModal(description, athleteId) {
 	const modal = document.createElement('div');
 	modal.classList.add('modal');
 
@@ -7,8 +7,7 @@ export default function createModal(description) {
 	modalContent.classList.add('modal-content');
 
 	const descriptionLink = document.createElement('a');
-	descriptionLink.href = '../athlete-details-page/athlete-details-page.html';
-
+	descriptionLink.href = `../athlete-details-page/athlete-details-page.html?id=${athleteId}`;
 
 	descriptionLink.target = '_blank'; // Open the link in a new tab/window
 	descriptionLink.style.textDecoration = 'none'; // Remove link decoration
@@ -32,5 +31,4 @@ export default function createModal(description) {
 	});
  
 	return modal;
- }
- 
+}

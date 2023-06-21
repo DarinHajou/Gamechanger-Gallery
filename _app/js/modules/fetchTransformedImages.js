@@ -73,7 +73,7 @@ function createTransformedImageCard(image) {
 
 
   // Create the modal and append it to the card
-  const modal = createModal(description);
+  const modal = createModal(description, image.athlete._id);
   card.appendChild(modal);
 
   // Add event listener to show modal on hover
