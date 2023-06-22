@@ -15,11 +15,13 @@ const currentPage = window.location.pathname.split("/").pop();
 
 // Only fetch transformed images if on the main page
 if (currentPage === 'main-details-page.html') {
+    console.log("We are on the main page");
     fetchTransformedImages();
 }
 
 // Only fetch athlete details if on the athlete details page
 if (currentPage === 'athlete-details-page.html') {
+    console.log("We are on the athlete details page");
     const urlParams = new URLSearchParams(window.location.search);
     const athleteId = urlParams.get('id');
   

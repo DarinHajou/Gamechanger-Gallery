@@ -1,3 +1,5 @@
+//fetchTransFormedImages.js
+
 import { sanity } from "../sanity.js";
 import createModal from './modal.js';
 
