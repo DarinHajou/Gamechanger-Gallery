@@ -4,6 +4,7 @@ import { sanity } from "../sanity.js";
 import createModal from './modal.js';
 
 export default async function fetchTransformedImages() {
+  console.log("fetchTransformedImages called");
   const query = `*[_type == 'transformationImages']{
     _id,
     name,
@@ -30,17 +31,20 @@ export default async function fetchTransformedImages() {
   }
 }
 
-const transformationImagesContainer = document.getElementById(
-  'transformationImagesContainer'
-);
+
 
 fetchTransformedImages().then((data) => {
-  data.forEach((image) => {
-    const transformedImageElement = createTransformedImageCard(image);
-    // console.log("Image:", image);
-    transformationImagesContainer.appendChild(transformedImageElement);
-  });
+  // check if the container exists before using it
+  const transformationImagesContainer = document.getElementById('transformationImagesContainer');
+  if (transformationImagesContainer) {
+    data.forEach((image) => {
+      const transformedImageElement = createTransformedImageCard(image);
+      transformationImagesContainer.appendChild(transformedImageElement);
+    });
+  }
 });
+
+
 
 function createTransformedImageCard(image) {
   const card = document.createElement('div');
