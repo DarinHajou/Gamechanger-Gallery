@@ -51,22 +51,23 @@ export default async function fetchAthleteDetails(athleteId) {
   fetchAthleteDetails(athleteId).then((data) => {
     // Code here to update your page with the fetched data.
     // This would depend on the specific structure and elements of your page.
-    // For instance:
     document.getElementById('athlete-image').src = data.image.asset.url;
     document.getElementById('athlete-name').textContent = data.name;
     document.getElementById('athlete-bio').textContent = data.bio;
     document.getElementById('athlete-birthDate').textContent = new Date(data.birthDate).toLocaleDateString();
     document.getElementById('athlete-nationality').textContent = data.nationality;
-
-     // Get the container element where you want to add the transformed images
-  const transformedImagesContainer = document.getElementById('transformed-images-container');
-
-  // Iterate over each transformed image and add it to the container
-  data.transformedImages.forEach((image) => {
-    const imgElement = document.createElement('img');
-    imgElement.src = image.image.asset.url;
-    imgElement.alt = image.name;
-    transformedImagesContainer.appendChild(imgElement);
+  
+    // Get the container element where you want to add the transformed images
+    const carouselContainer = document.querySelector('.carousel-container');
+  
+    // Iterate over each transformed image and add it to the container
+    data.transformedImages.forEach((image, index) => {
+      const imgElement = document.createElement('img');
+      imgElement.src = image.image.asset.url;
+      imgElement.alt = image.name;
+      imgElement.classList.add('carousel-item'); // Add this class to each item
+      if (index === 0) imgElement.classList.add('active'); // Add 'active' class to the first image
+      carouselContainer.appendChild(imgElement);
     });
   });
   

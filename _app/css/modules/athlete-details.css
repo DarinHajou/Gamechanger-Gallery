@@ -1,0 +1,9 @@
+#athlete-name {
+    padding: 1rem;
+    text-align: center;
+}
+
+#athlete-bio{
+    padding: 1rem;
+    font-family: 'Oswald', sans-serif;
+}

@@ -5,10 +5,13 @@ import transformSlideshow from './modules/transformation-slideshow.js';
 import fetchTransformedImages from './modules/fetchTransformedImages.js';
 import createModal from './modules/modal.js';
 import fetchAthleteDetails from './modules/fetchAthleteDetails.js';
+import carousel from './modules/carousel.js';
 
-header();
-bannerSlide();
-transformSlideshow();
+document.addEventListener('DOMContentLoaded', (event) => {
+    header();
+    bannerSlide();
+    transformSlideshow();
+    carousel();
 
 // Determine the current page
 const currentPage = window.location.pathname.split("/").pop();
@@ -29,4 +32,4 @@ if (currentPage === 'athlete-details-page.html') {
     createModal();
     fetchAthleteDetails(athleteId);
   } 
-
+});
