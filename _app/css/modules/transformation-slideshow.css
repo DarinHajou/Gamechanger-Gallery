@@ -69,6 +69,7 @@
 	font-size: 14px;
 	padding: 6px 12px;
 	background: var(--color-foreground);
+	background: red;
  }
 
 .latest-transformations__slideshow__button--left {

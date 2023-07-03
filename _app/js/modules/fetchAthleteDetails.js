@@ -38,9 +38,10 @@ export default async function fetchAthleteDetails(athleteId) {
     console.error("Error fetching data:", error);
     throw error;
   }
+  // return athleteDetails;
+
 }
-
-
+if (window.location.pathname.includes('athlete-details-page.html')) {
 
   // This should be executed when athlete-details-page.html is loaded
   const urlParams = new URLSearchParams(window.location.search);
@@ -70,4 +71,4 @@ export default async function fetchAthleteDetails(athleteId) {
       carouselContainer.appendChild(imgElement);
     });
   });
-  
+}

@@ -31,8 +31,6 @@ export default async function fetchTransformedImages() {
   }
 }
 
-
-
 fetchTransformedImages().then((data) => {
   // check if the container exists before using it
   const transformationImagesContainer = document.getElementById('transformationImagesContainer');
@@ -43,8 +41,6 @@ fetchTransformedImages().then((data) => {
     });
   }
 });
-
-
 
 function createTransformedImageCard(image) {
   const card = document.createElement('div');
