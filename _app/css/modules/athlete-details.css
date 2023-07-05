@@ -7,3 +7,10 @@
     padding: 1rem;
     font-family: 'Oswald', sans-serif;
 }
+
+#athlete-image {
+    width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
