@@ -65,8 +65,6 @@ Here are some suggestions for future improvements to enhance the Gamechanger Gal
 License
 This project is intended for educational and practice purposes only. It is not intended for commercial use. As a student at Høyskolen i Kristiania in Oslo, the project is part of my educational coursework and does not carry any specific license
 
-The Gamechanger Gallery project is licensed under the MIT License. Feel free to use and modify the code for personal or commercial purposes.
-
 Contact
 Darin Hajou
 tech.related@hotmail.com
