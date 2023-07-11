@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.slider-container__button {
+.slider-button {
     position: absolute;
     top: 50%;
     left: 50%;
