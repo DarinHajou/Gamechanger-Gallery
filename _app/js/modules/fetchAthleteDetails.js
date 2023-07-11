@@ -52,11 +52,11 @@ if (window.location.pathname.includes('athlete-details-page.html')) {
   fetchAthleteDetails(athleteId).then((data) => {
     // Code here to update your page with the fetched data.
     // This would depend on the specific structure and elements of your page.
-    document.getElementById('athlete-image').src = data.image.asset.url;
-    document.getElementById('athlete-name').textContent = data.name;
-    document.getElementById('athlete-bio').textContent = data.bio;
-    document.getElementById('athlete-birthDate').textContent = new Date(data.birthDate).toLocaleDateString();
-    document.getElementById('athlete-nationality').textContent = data.nationality;
+    document.getElementById('athlete-details__image').src = data.image.asset.url;
+    document.getElementById('athlete-details__name').textContent = data.name;
+    document.getElementById('athlete-details__bio').textContent = data.bio;
+    document.getElementById('athlete-details__birthDate').textContent = new Date(data.birthDate).toLocaleDateString();
+    document.getElementById('athlete-details__nationality').textContent = data.nationality;
   
     // Get the container element where you want to add the transformed images
     const carouselContainer = document.querySelector('.carousel-container');

@@ -1,14 +1,14 @@
-#athlete-name {
+#athlete-details__name {
     padding: 1rem;
     text-align: center;
 }
 
-#athlete-bio{
+#athlete-details__bio{
     padding: 1rem;
     font-family: 'Oswald', sans-serif;
 }
 
-#athlete-image {
+#athlete-details__image {
     width: 700px;
     height: auto;
     display: block;
