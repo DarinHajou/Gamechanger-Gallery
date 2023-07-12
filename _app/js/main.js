@@ -6,8 +6,10 @@ import fetchTransformedImages from './modules/fetchTransformedImages.js';
 import createModal from './modules/modal.js';
 import fetchAthleteDetails from './modules/fetchAthleteDetails.js';
 import carousel from './modules/carousel.js';
+import slider from './modules/transformSlider.js'
 
 transformSlideshow();
+slider();
 
 document.addEventListener('DOMContentLoaded', (event) => {
     header();
