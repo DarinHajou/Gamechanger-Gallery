@@ -1,7 +1,6 @@
 .main-section {
 	background-color: #ffffff;
 	/* background-image: url('/_app/assets/images/texture.jpg'); */
-
  }
  
 .slideshow-container {
@@ -26,8 +25,8 @@
 	height: 13px;
 	border-radius: 50%;
 	background-color: green;
-	left: -20px; /* Adjust the position as needed */
-	top: 50%; /* Adjust the position as needed */
+	left: -20px;
+	top: 50%;
 	transform: translateY(-50%);
 	animation: blink 1s infinite;
  }
@@ -104,7 +103,6 @@
 .latest-transformations__image {
 	width: 100%;
 	object-fit: contain;
-	
 }
 
 @media (min-width: 768px) {
@@ -127,9 +125,7 @@
 }
 
 @media (max-width: 767px) {
-	.latest-transformations__slideshow:nth-child(2) {
-
-	}
+	
 	.latest-transformations__title {
 		margin-left: 20px;
 	} 
