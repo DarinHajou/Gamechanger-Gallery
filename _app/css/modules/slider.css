@@ -1,8 +1,8 @@
-.slider-container {
+.athlete-details__slider-container {
     position: relative;
 }
 
-.slider-button {
+.athlete-details__slider-button {
     position: absolute;
     top: 50%;
     left: 50%;

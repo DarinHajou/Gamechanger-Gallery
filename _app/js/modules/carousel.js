@@ -4,7 +4,7 @@ export default function rotateCarousel() {
     const degree = 360 / carouselItems.length;
 
     carouselItems.forEach((item, index) => {
-        item.style.transform = `rotateY(${index * degree}deg) translateZ(230px)`; // Adjust as needed
+        item.style.transform = `rotateY(${index * degree}deg) translateZ(230px)`;
     });
 
     const activeItem = document.querySelector('.carousel-item.active');
